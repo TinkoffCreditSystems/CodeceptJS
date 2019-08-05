@@ -2,8 +2,9 @@
 // Project: https://github.com/codeception/codeceptjs/
 /// <reference path="./types.d.ts" />
 
-import * as Protractor from "protractor";
-import index = require("../lib/index");
+// import * as Protractor from "protractor";
+//@ts-ignore
+import * as index from '../lib/index' // @todo почему-то не хочет работать на проекте
 
 type ValueOf<T> = T[keyof T]
 type KeyValueTupleToObject<T extends [keyof any, any]> = {
@@ -66,13 +67,13 @@ declare global {
       Then: typeof Then;
 
       // Used by Protractor helper
-      by: Protractor.ProtractorBy;
-      By: Protractor.ProtractorBy;
-      ExpectedConditions: Protractor.ProtractorExpectedConditions;
-      element: typeof Protractor.element;
-      $: typeof Protractor.$;
-      $$: typeof Protractor.$$;
-      browser: Protractor.ProtractorBrowser;
+      // by: Protractor.ProtractorBy;
+      // By: Protractor.ProtractorBy;
+      // ExpectedConditions: Protractor.ProtractorExpectedConditions;
+      // element: typeof Protractor.element;
+      // $: typeof Protractor.$;
+      // $$: typeof Protractor.$$;
+      // browser: Protractor.ProtractorBrowser;
     }
   }
 
